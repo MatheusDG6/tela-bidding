@@ -79,11 +79,11 @@ public class AuthController {
         return "redirect:/login";
     }
     
-    @GetMapping("/listar")
-    public String listarEditais(
-            @ModelAttribute UserDTO user
-    ) {
-        restService.listarEditais(EditalDTO edital);
-        return "listar";
-    }
+    //@GetMapping("/listar")
+    //public String listarEditais(
+      //      @ModelAttribute UserDTO user
+    //) {
+        //restService.listarEditais(EditalDTO edital);
+      //  return "listar";
+    //}
 }

@@ -25,7 +25,7 @@ public class EditalPageController {
     @Autowired
     private AuthRestClientService restService;
     
-    @GetMapping("/")
+    @GetMapping("/editais")
     public String home(
             HttpSession session
     ) {
