@@ -11,9 +11,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     
-    <body style="height: 100vh; background-color: #ced4da" class="d-flex justify-content-center align-items-center ">
-        <div class="card shadow p-3 mb-5 bg-body rounded container-sm" style="max-width: 400px">
-            <h4>Login:</h4>
+    <body style="height: 100vh; background-color: #dee2e6" class="d-flex justify-content-center align-items-center ">
+        <div class="card shadow p-4 mb-6 bg-body rounded container-sm" style="max-width: 400px">
+            <div class="container justify-content-center align-items-center col-4">
+            <h3>Login</h3>
+            </div>
             <div class="card-body">
                 <form class="d-grid gap-3"th:action="@{/logar}" th:object="${credenciais}" method="post">
                     

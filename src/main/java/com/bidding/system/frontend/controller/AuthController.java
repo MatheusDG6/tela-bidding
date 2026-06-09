@@ -28,11 +28,12 @@ public class AuthController {
     
     // Tratador para requisições GET no caminho raiz "/".
     // Retorna o nome da view Thymeleaf "index".
-    @GetMapping("/")
+    @GetMapping("index")
     public String home(
             HttpSession session
     ) {
-        return "index";
+        Object token = session.getAttribute("token");
+        return "index";     
     }
     
     // Tratador para requisições GET em "/login".
@@ -78,12 +79,4 @@ public class AuthController {
         restService.registrar(user);
         return "redirect:/login";
     }
-    
-    //@GetMapping("/listar")
-    //public String listarEditais(
-      //      @ModelAttribute UserDTO user
-    //) {
-        //restService.listarEditais(EditalDTO edital);
-      //  return "listar";
-    //}
 }
