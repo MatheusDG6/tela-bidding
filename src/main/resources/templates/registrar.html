@@ -16,35 +16,36 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <div class="card shadow p-5 mb-7 bg-body rounded container-sm" style="max-width: 500px">
             <div class="container justify-content-center align-items-center col-5">
                 <h4>CADASTRAR</h4>
+                <br>
             </div>
             <form 
                 th:action="@{/registrar}" 
                 th:object="${user}" method="post"
                 >
                 
-                <div class="form-floating mb-2">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">Nome</label>
+                <div class="form-floating">
+                    <input type="text" th:field="*{nome}" class="form-control" id="nome" placeholder="name@example.com">
+                    <label for="nome">Nome</label>
                     <label>Nome: </label>
                     <br/>
                 </div>
                 
-                <div class="form-floating mb-2">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <div class="form-floating">
+                    <input type="email" th:field="*{email}" class="form-control" id="floatingInput" placeholder="name@example.com">
                     <label for="floatingInput">Email</label>
                     <label>Email: </label>
                     <br/>
                 </div>
                 
-                <div class="form-floating mb-2">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <div class="form-floating">
+                    <input type="password" th:field="*{senha}" class="form-control" id="floatingPassword" placeholder="Password">
                     <label for="floatingPassword">Senha</label>
                     <label>Senha: </label>
                     <br/>
                 </div>
                 
                 <div class="justify-content-center align-middle">
-                    <button type="button" class="btn btn-success w-100">Cadastrar</button>
+                    <button type="submit" class="btn btn-success w-100">Cadastrar</button>
                 </div>
             </form>
         </div>

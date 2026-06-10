@@ -19,7 +19,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <div class="card-body">
                 <form class="d-grid gap-3"th:action="@{/logar}" th:object="${credenciais}" method="post">
                     
-                    <div class="form-floating mb-3">
+                    <div class="form-floating">
                         <input type="email" th:field="*{email}" class="form-control" id="floatingInput" placeholder="name@example.com">
                         <label for="floatingInput">Email</label>
                     </div>
@@ -31,6 +31,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
                     <div>
                         <button style="width: 100%" type="submit" class="btn btn-success">Logar</button>
+                    </div>
+                    
+                    <div class="d-flex flex-column bd-highlight gap-2 ">
+                        <a th:href="@{index}" href="./inicio"><button style="width: 100%" type="submit" class="btn btn-info">Voltar ao inicio</button></a>
                     </div>
                     
                 </form>
